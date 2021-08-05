@@ -12,19 +12,4 @@ export default gql`
     avatarURL: String
     location: String
   }
-  type CreateAccountResult {
-    ok: Boolean!
-    error: String
-  }
-  type Mutation {
-    createAccount(
-      name: String!
-      username: String!
-      email: String!
-      password: String!
-    ): CreateAccountResult!
-  }
-  type Query {
-    seeProfile(username: String): User
-  }
 `;
