@@ -11,5 +11,15 @@ export default gql`
     githubUsername: String
     avatarURL: String
     location: String
+    followers(page: Int): [User]
+    followings(page: Int): [User]
+  }
+  type SeeUserResult {
+    ok: Boolean!
+    error: String
+    user: User
+  }
+  type Query {
+    seeUser(id: Int!): SeeUserResult!
   }
 `;
